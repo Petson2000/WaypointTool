@@ -1,46 +1,50 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
 public class Character : MonoBehaviour
 {
-    public Vector3[] wayPoints;
-    public int currentWaypoint = 0;
-    public Vector3 targetPos;
+    public List<Vector3> wayPoints;
+    private int currentWaypoint = 0;
+    private Vector3 targetPos;
+    public bool repeatPath = true;
 
-    private NavMeshAgent agent;
-
-    void Start()
-    {
-        agent = GetComponent<NavMeshAgent>();
-    }
-
-    void FixedUpdate()
+    public GameObject wayPointObj;
+    
+    private void Update()
     {
         Move();
     }
 
-    void Move()
+    private void Move()
     {
         targetPos = wayPoints[currentWaypoint];
 
-        if (transform.position != targetPos)
+        if (Vector3.Distance(transform.position, targetPos) >= .5f)
         {
-            agent.SetDestination(targetPos);
-            //transform.position = Vector3.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
+            //agent.SetDestination(targetPos);
+            transform.position = Vector3.MoveTowards(transform.position, targetPos, 15f * Time.deltaTime);
         }
 
         else
         {
-            if (wayPoints[currentWaypoint] != wayPoints[wayPoints.Length - 1])
+            if (wayPoints[currentWaypoint] != wayPoints[wayPoints.Count - 1])
             {
-                currentWaypoint++;
+                if (currentWaypoint <= wayPoints.Count)
+                {
+                    currentWaypoint++;
+                }
+            }
+            
+            else if (currentWaypoint == wayPoints.Count - 1 && repeatPath)
+            {
+                currentWaypoint = 0;
             }
         }
     }
 
-    public Vector3[] GetWaypoints()
+    public void CreateWaypoint(Vector3 spawnPosition)
     {
-        return wayPoints;
+        Vector3 newWaypoint = new Vector3(spawnPosition.x, 1f, spawnPosition.z);
+        wayPoints.Add(newWaypoint);
     }
 }
