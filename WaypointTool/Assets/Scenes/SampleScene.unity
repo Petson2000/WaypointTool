@@ -500,7 +500,7 @@ PrefabInstance:
     - target: {fileID: 744595563081045668, guid: 6b389eea9907cac4191bbfe73b6494fc,
         type: 3}
       propertyPath: wayPoints.Array.data[4].x
-      value: 9.301532
+      value: -1.3190126
       objectReference: {fileID: 0}
     - target: {fileID: 744595563081045668, guid: 6b389eea9907cac4191bbfe73b6494fc,
         type: 3}

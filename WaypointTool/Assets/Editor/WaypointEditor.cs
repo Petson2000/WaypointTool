@@ -33,7 +33,6 @@ public class WaypointEditor : Editor
 
         SceneView.duringSceneGui += OnSceneGUI;
 
-        //Selection.selectionChanged += Repaint;
     }
 
     void DrawListItems(Rect rect, int index, bool isActive, bool isFocused)
@@ -62,8 +61,6 @@ public class WaypointEditor : Editor
 
         wayPointList.DoLayoutList();
 
-        //EditorGUILayout.PropertyField(propWayPoints);
-
         propRepeatPath.boolValue = EditorGUILayout.Toggle("Repeat path", propRepeatPath.boolValue);
 
         if (GUILayout.Button("Add waypoint"))
@@ -89,8 +86,6 @@ public class WaypointEditor : Editor
     {
         Handles.color = Color.green;
         so.Update();
-
-        //Selection.activeObject = character;
 
         for (int i = 0; i < propWayPoints.arraySize; i++)
         {
@@ -128,17 +123,11 @@ public class WaypointEditor : Editor
             }
         }
 
-        Vector3 v;
         so.ApplyModifiedProperties();
     }
 
     private void OnDisable()
     {
         SceneView.duringSceneGui -= OnSceneGUI;
-    }
-
-    void OnClick()
-    {
-        
     }
 }

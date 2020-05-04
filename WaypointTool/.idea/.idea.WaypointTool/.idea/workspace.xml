@@ -12,9 +12,6 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Editor/WaypointEditor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/455E94FE-44AA-4935-9A20-9950D8D8B123/b3/d7287786/SceneView.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Save System/GameDataReader.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Save System/GameDataWriter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -24,8 +21,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Save System/GameDataReader.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Save System/GameDataWriter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Save System/Storage.cs" />
-        <option value="$PROJECT_DIR$/Assets/Editor/WaypointEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character.cs" />
+        <option value="$PROJECT_DIR$/Assets/Editor/WaypointEditor.cs" />
       </list>
     </option>
   </component>
@@ -76,6 +73,7 @@
       <workItem from="1587570121744" duration="884000" />
       <workItem from="1587642870062" duration="1043000" />
       <workItem from="1587647411802" duration="2077000" />
+      <workItem from="1588576159094" duration="39000" />
     </task>
     <servers />
   </component>
